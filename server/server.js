@@ -12,5 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api", appointmentRoutes);
+app.get("/", (req, res) => {
+  res.send("CareFlow backend is running 🚀");
+});
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
